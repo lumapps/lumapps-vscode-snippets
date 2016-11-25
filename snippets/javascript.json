@@ -1,0 +1,159 @@
+{
+    // Angular
+    "@ngInject": {
+        "prefix": "ng-inject",
+        "body": [
+            "/* @ngInject */"
+        ],
+		"description": "Add an auto-injection loader comment."
+    },
+
+	// ESLint
+    "Disable ESLint": {
+        "prefix": "eslint-disable",
+        "body": [
+            "/* eslint-disable ${1:my-rule-name} */"
+        ],
+		"description": "Disable ESLint (with optional rule name to disable) from now on."
+    },
+
+    "Disable ESLint - Next line": {
+        "prefix": "eslint-disable-next",
+        "body": [
+            "// eslint-disable-next-line ${1:my-rule-name}"
+        ],
+		"description": "Disable ESLint (with optional rule name to disable) for the next line only."
+    },
+
+    "Enable ESLint": {
+        "prefix": "eslint-enable",
+        "body": [
+            "/* eslint-enable ${1:my-rule-name} */"
+        ],
+		"description": "(Re-)Enable ESLint (or rules) from now on."
+    },
+
+    // Separators
+    "Default separator": {
+        "prefix": "separator-default",
+        "body": [
+            "",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a default separator."
+    },
+
+    "Separator for events": {
+        "prefix": "separator-events",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//          Events         //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add an events separator."
+    },
+
+    "Separator for init method": {
+        "prefix": "separator-init",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "",
+            "/**",
+            "* Initialize the controller.",
+            "*/",
+            ""
+        ],
+		"description": "Add an init separator."
+    },
+
+    "Separator for private attributes": {
+        "prefix": "separator-private-attributes",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Private attributes   //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a private attributes separator."
+    },
+
+    "Separator for public attributes": {
+        "prefix": "separator-public-attributes",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Public attributes    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a public attributes separator."
+    },
+
+    "Separator for private functions": {
+        "prefix": "separator-private-functions",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Private functions    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a private functions separator."
+    },
+
+    "Separator for public functions": {
+        "prefix": "separator-public-functions",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//     Public functions    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a public functions separator."
+    },
+
+    "Separator for services and utilities": {
+        "prefix": "separator-services-utilities",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "",
+            "/**",
+            "* Services and utilities.",
+            "*/",
+            ""
+        ],
+		"description": "Add a services and utilities separator."
+    },
+
+    "Separator for watchers": {
+        "prefix": "separator-watchers",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//        Watchers         //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a watchers separator."
+    }
+
+}
