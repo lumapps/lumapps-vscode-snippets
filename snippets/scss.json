@@ -1,0 +1,301 @@
+{
+    // Colors
+    "Primary": {
+        "prefix": "$primary",
+        "body": [
+            "\\$primary"
+        ],
+		"description": "Use primary color variable"
+    },
+
+    "Accent": {
+        "prefix": "$accent",
+        "body": [
+            "\\$accent"
+        ],
+		"description": "Use accent color variable"
+    },
+
+    "White-1": {
+        "prefix": "$white-1",
+        "body": [
+            "\\$white-1"
+        ],
+		"description": "Use white-1 color variable"
+    },
+
+    "White-2": {
+        "prefix": "$white-2",
+        "body": [
+            "\\$white-2"
+        ],
+		"description": "Use white-2 color variable"
+    },
+
+    "White-3": {
+        "prefix": "$white-3",
+        "body": [
+            "\\$white-3"
+        ],
+		"description": "Use white-3 color variable"
+    },
+
+    "White-4": {
+        "prefix": "$white-4",
+        "body": [
+            "\\$white-4"
+        ],
+		"description": "Use white-4 color variable"
+    },
+
+    "Black-1": {
+        "prefix": "$black-1",
+        "body": [
+            "\\$black-1"
+        ],
+		"description": "Use black-1 color variable"
+    },
+
+    "Black-2": {
+        "prefix": "$black-2",
+        "body": [
+            "\\$black-2"
+        ],
+		"description": "Use black-2 color variable"
+    },
+
+    "Black-3": {
+        "prefix": "$black-3",
+        "body": [
+            "\\$black-3"
+        ],
+		"description": "Use black-3 color variable"
+    },
+
+    "Black-4": {
+        "prefix": "$black-4",
+        "body": [
+            "\\$black-4"
+        ],
+		"description": "Use black-4 color variable"
+    },
+
+    // Base spacing unit
+    "Base spacing unit": {
+        "prefix": "$base-spacing-unit",
+        "body": [
+            "\\$base-spacing-unit"
+        ],
+		"description": "Use base-spacing-unit value"
+    },
+    
+    "Base spacing unit factor": {
+        "prefix": "$base-spacing-unit *",
+        "body": [
+            "\\$base-spacing-unit * ${1:factor}"
+        ],
+		"description": "Use base-spacing-unit value with a factor"
+    },
+
+    // Media-queries
+    "Media-query palm": {
+        "prefix": "@media-palm",
+        "body": [
+            "@include media-query(palm) {\n\t${1:rules}\n}"
+        ],
+		"description": "Include media-query(palm) mixin"
+    },
+
+    "Media-query lap": {
+        "prefix": "@media-lap",
+        "body": [
+            "@include media-query(lap) {\n\t${1:rules}\n}"
+        ],
+		"description": "Include media-query(lap) mixin"
+    },
+
+    "Media-query lap-and-up": {
+        "prefix": "@media-lap-and-up",
+        "body": [
+            "@include media-query(lap-and-up) {\n\t${1:rules}\n}"
+        ],
+		"description": "Include media-query(lap-and-up) mixin"
+    },
+
+    "Media-query portable": {
+        "prefix": "@media-portable",
+        "body": [
+            "@include media-query(portable) {\n\t${1:rules}\n}"
+        ],
+		"description": "Include media-query(portable) mixin"
+    },
+
+    "Media-query desk": {
+        "prefix": "@media-desk",
+        "body": [
+            "@include media-query(desk) {\n\t${1:rules}\n}"
+        ],
+		"description": "Include media-query(desk) mixin"
+    },
+
+    "Media-query desk-wild": {
+        "prefix": "@media-desk-wild",
+        "body": [
+            "@include media-query(desk-wild) {\n\t${1:rules}\n}"
+        ],
+		"description": "Include media-query(desk-wild) mixin"
+    },
+
+    // Mixin Flex
+    "Display flex": {
+        "prefix": "@display-flex",
+        "body": [
+            "@include display(flex);"
+        ],
+		"description": "Include display flex mixin"
+    },
+
+    "Flex": {
+        "prefix": "@flex",
+        "body": [
+            "@include flex(${1:flex-grow flex-shrink flex-basis});"
+        ],
+		"description": "Include flex mixin"
+    },
+
+    "Justify-content": {
+        "prefix": "@justify-content",
+        "body": [
+            "@include justify-content(${1:property});"
+        ],
+		"description": "Include justify-content mixin"
+    },
+
+    "Align-items": {
+        "prefix": "@align-items",
+        "body": [
+            "@include align-items(${1:property});"
+        ],
+		"description": "Include align-items mixin"
+    },
+
+    "Flex-wrap": {
+        "prefix": "@flex-wrap",
+        "body": [
+            "@include flex-wrap(${1:property});"
+        ],
+		"description": "Include flex-wrap mixin"
+    },
+
+    // Background mixins
+    "Theme-background-image": {
+        "prefix": "@theme-background-image",
+        "body": [
+            "@include theme-background-image(${1:img-path});"
+        ],
+		"description": "Include theme-background-image mixin, !important is supported"
+    },
+
+    "Theme-background": {
+        "prefix": "@theme-background",
+        "body": [
+            "@include theme-background(${1:img-path}, ${2:other-rules);"
+        ],
+		"description": "Include theme-background mixin"
+    },
+
+    // Lumx mixins
+    "MDI": {
+        "prefix": "@mdi",
+        "body": [
+            "@include mdi();"
+        ],
+		"description": "Include mdi mixin"
+    },
+
+    "MDI-icon": {
+        "prefix": "@mdi-icon",
+        "body": [
+            "@include mdi-icon(${1:icon-name});"
+        ],
+		"description": "Include mdi-icon mixin"
+    },
+
+    "Lx-icon": {
+        "prefix": "@icon",
+        "body": [
+            "@include icon(${1:icon-size}, ${2:icon-color}, ${3:icon-type});"
+        ],
+		"description": "Include Lumx icon mixin"
+    },
+
+    // Others mixins
+    "Position": {
+        "prefix": "@position",
+        "body": [
+            "@include position(${1:position value}, ${2:top left bottom right});"
+        ],
+		"description": "Include position mixin, use null for ignore a coordinate"
+    },
+
+    "Size": {
+        "prefix": "@size",
+        "body": [
+            "@include size(${1:width}, ${2:height});"
+        ],
+		"description": "Include size mixin, use 1 value if width = height"
+    },
+
+    "Font-size": {
+        "prefix": "@font-size",
+        "body": [
+            "@include font-size(${1:font-size value in px}px);"
+        ],
+		"description": "Include font-size mixin, convert px in rem"
+    },
+
+    "Max-lines": {
+        "prefix": "@max-lines",
+        "body": [
+            "@include max-lines(${1:font-size in px}, ${3:line-height in px}, ${3:lines});"
+        ],
+		"description": "Include max-lines mixin"
+    },
+    
+    "Z-depth": {
+        "prefix": "@z-depth",
+        "body": [
+            "@mixin z-depth(${1:z-depth});"
+        ],
+		"description": "Include z-depth (0-5) mixin"
+    },
+
+
+    
+
+    // Separators
+    "Header": {
+        "prefix": "@header-title",
+        "body": [
+            "///*------------------------------------*\\",
+            "//    #${1:FILE_NAME}",
+            "//\\*------------------------------------*/",
+            ""
+        ],
+		"description": "Add a default separator."
+    },
+
+    "Five lines": {
+        "prefix": "@separator-5-lines",
+        "body": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+		"description": "Add five empty lines space"
+    },
+
+}
