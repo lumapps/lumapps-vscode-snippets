@@ -228,6 +228,30 @@
         ],
 		"description": "Include Lumx icon mixin"
     },
+    
+    "Btn-reset": {
+        "prefix": "@btn-reset",
+        "body": [
+            "@include btn-reset();"
+        ],
+		"description": "Include Lumx btn-reset mixin"
+    },
+
+    "Btn-disabled": {
+        "prefix": "@btn-disable",
+        "body": [
+            "@include btn-disabled(${1:btn-type});"
+        ],
+		"description": "Include Lumx btn-disabled mixin"
+    },
+
+    "Btn": {
+        "prefix": "@btn",
+        "body": [
+            "@include btn(${1:btn-size}, ${2:btn-color}, ${3:btn-type});"
+        ],
+		"description": "Include Lumx btn mixin"
+    },
 
     // Others mixins
     "Position": {
