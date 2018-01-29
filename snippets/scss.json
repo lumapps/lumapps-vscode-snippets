@@ -21,7 +21,7 @@
         "body": [
             "\\$white-1"
         ],
-		"description": "Use white-1 color variable"
+		"description": "Use white 100% color variable"
     },
 
     "White-2": {
@@ -29,7 +29,7 @@
         "body": [
             "\\$white-2"
         ],
-		"description": "Use white-2 color variable"
+		"description": "Use white 70% color variable"
     },
 
     "White-3": {
@@ -37,7 +37,7 @@
         "body": [
             "\\$white-3"
         ],
-		"description": "Use white-3 color variable"
+		"description": "Use white 30% color variable"
     },
 
     "White-4": {
@@ -45,7 +45,7 @@
         "body": [
             "\\$white-4"
         ],
-		"description": "Use white-4 color variable"
+		"description": "Use white 12% color variable"
     },
 
     "Black-1": {
@@ -53,7 +53,7 @@
         "body": [
             "\\$black-1"
         ],
-		"description": "Use black-1 color variable"
+		"description": "Use black 87% color variable"
     },
 
     "Black-2": {
@@ -61,7 +61,7 @@
         "body": [
             "\\$black-2"
         ],
-		"description": "Use black-2 color variable"
+		"description": "Use black 54% color variable"
     },
 
     "Black-3": {
@@ -69,7 +69,7 @@
         "body": [
             "\\$black-3"
         ],
-		"description": "Use black-3 color variable"
+		"description": "Use black 38% color variable"
     },
 
     "Black-4": {
@@ -77,7 +77,7 @@
         "body": [
             "\\$black-4"
         ],
-		"description": "Use black-4 color variable"
+		"description": "Use black 12% color variable"
     },
 
     // Base spacing unit
@@ -185,6 +185,14 @@
             "@include flex-wrap(${1:property});"
         ],
 		"description": "Include flex-wrap mixin"
+    },
+
+    "Order": {
+        "prefix": "@order",
+        "body": [
+            "@include order(${1:order});"
+        ],
+        "description": "Include order mixin"
     },
 
     // Background mixins
