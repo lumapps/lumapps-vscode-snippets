@@ -1,0 +1,41 @@
+{
+    "name": "lumapps-vscode-snippets",
+    "displayName": "lumapps-vscode-snippets",
+    "publisher": "lumapps",
+    "icon": "images/lumapps-logo.png",
+    "description": "Visual Studio Code snippets for LumApps",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lumapps/lumapps-vscode-snippets/issues"
+    },
+    "homepage": "https://github.com/lumapps/lumapps-vscode-snippets/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lumapps/lumapps-vscode-snippets.git"
+    },
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "lumapps",
+        "snippets",
+        "angular",
+        "scss"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "scss",
+                "path": "./snippets/scss.json"
+            }
+        ]
+    }
+}

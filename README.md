@@ -1,29 +1,26 @@
-# Visual Studio Code snippets for LumSites
-
-## Installation
-
-### OSX
-
-Copy snippets/javascript.json in your /Users/xxxxxxxxxx/Library/Application Support/Code/User/snippets/ folder.
+# Visual Studio Code snippets for LumApps
 
 Want LumX snippets? Checkout the [LumX VSCode snippets extension](https://github.com/lumapps/lumX-vscode-snippets/)
 
 ## Supported snippets
 
-Checkout [javascript.json](https://github.com/lumapps/lumX-vscode-snippets/blob/master/snippets/html.json) for a
-detailed description of what each snippet actually does.
+Checkout [javascript.json](https://github.com/lumapps/lumapps-vscode-snippets/blob/master/snippets/javascript.json) and
+[scss.json](https://github.com/lumapps/lumapps-vscode-snippets/blob/master/snippets/scss.json) for a detailed
+description of what each snippet actually does.
 
-### Angular
+### JavaScript
+
+#### AngularJS
 
 - ng-inject
 
-### ESLint
+#### ESLint
 
 - eslint-disable
 - es-lint-disable-next
 - eslint-enable
 
-### Separators
+#### Separators
 
 - separator-default
 - separator-events
@@ -32,3 +29,11 @@ detailed description of what each snippet actually does.
 - separator-private-functions
 - separator-public-functions
 - separator-watchers
+
+### SCSS
+
+- Colors ($primary, $accent, etc...)
+- Spacing
+- Media queries
+- Mixins (flexbox, alignment, background)
+- Separators

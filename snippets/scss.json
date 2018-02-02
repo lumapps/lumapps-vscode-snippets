@@ -88,7 +88,7 @@
         ],
 		"description": "Use base-spacing-unit value"
     },
-    
+
     "Base spacing unit factor": {
         "prefix": "$base-spacing-unit *",
         "body": [
@@ -212,7 +212,7 @@
 		"description": "Include theme-background mixin"
     },
 
-    // Lumx mixins
+    // LumX mixins
     "MDI": {
         "prefix": "@mdi",
         "body": [
@@ -236,7 +236,7 @@
         ],
 		"description": "Include Lumx icon mixin"
     },
-    
+
     "Btn-reset": {
         "prefix": "@btn-reset",
         "body": [
@@ -293,7 +293,7 @@
         ],
 		"description": "Include max-lines mixin"
     },
-    
+
     "Z-depth": {
         "prefix": "@z-depth",
         "body": [
@@ -303,7 +303,7 @@
     },
 
 
-    
+
 
     // Separators
     "Header": {
@@ -328,6 +328,5 @@
             ""
         ],
 		"description": "Add five empty lines space"
-    },
-
+    }
 }
