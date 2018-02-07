@@ -65,8 +65,8 @@
             "/////////////////////////////",
             "",
             "/**",
-            "* Initialize the controller.",
-            "*/",
+            " * Initialize the controller.",
+            " */",
             ""
         ],
 		"description": "Add an init separator."
@@ -135,8 +135,8 @@
             "/////////////////////////////",
             "",
             "/**",
-            "* Services and utilities.",
-            "*/",
+            " * Services and utilities.",
+            " */",
             ""
         ],
 		"description": "Add a services and utilities separator."
