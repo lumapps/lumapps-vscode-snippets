@@ -158,7 +158,7 @@
     "Flex": {
         "prefix": "@flex",
         "body": [
-            "@include flex(${1:flex-grow flex-shrink flex-basis});"
+            "@include flex(${1:flex_grow flex_shrink flex_basis});"
         ],
 		"description": "Include flex mixin"
     },
@@ -207,7 +207,7 @@
     "Theme-background-image": {
         "prefix": "@theme-background-image",
         "body": [
-            "@include theme-background-image(${1:img-path});"
+            "@include theme-background-image(${1:img_path});"
         ],
 		"description": "Include theme-background-image mixin, !important is supported"
     },
@@ -215,7 +215,7 @@
     "Theme-background": {
         "prefix": "@theme-background",
         "body": [
-            "@include theme-background(${1:img-path}, ${2:other-rules);"
+            "@include theme-background(${1:img_path}, ${2:other_rules);"
         ],
 		"description": "Include theme-background mixin"
     },
@@ -232,7 +232,7 @@
     "MDI-icon": {
         "prefix": "@mdi-icon",
         "body": [
-            "@include mdi-icon(${1:icon-name});"
+            "@include mdi-icon(${1:'icon_name'});"
         ],
 		"description": "Include mdi-icon mixin"
     },
@@ -240,7 +240,7 @@
     "Lx-icon": {
         "prefix": "@icon",
         "body": [
-            "@include icon(${1:icon-size}, ${2:icon-color}, ${3:icon-type});"
+            "@include icon(${1:'icon_size'}, ${2:'icon-color'}, ${3:'icon_type'});"
         ],
 		"description": "Include Lumx icon mixin"
     },
@@ -256,7 +256,7 @@
     "Btn-disabled": {
         "prefix": "@btn-disable",
         "body": [
-            "@include btn-disabled(${1:btn-type});"
+            "@include btn-disabled(${1:'btn_type'});"
         ],
 		"description": "Include Lumx btn-disabled mixin"
     },
@@ -264,7 +264,7 @@
     "Btn": {
         "prefix": "@btn",
         "body": [
-            "@include btn(${1:btn-size}, ${2:btn-color}, ${3:btn-type});"
+            "@include btn(${1:'btn_size'}, ${2:'btn_color'}, ${3:'btn_type'});"
         ],
 		"description": "Include Lumx btn mixin"
     },
@@ -273,7 +273,7 @@
     "Position": {
         "prefix": "@position",
         "body": [
-            "@include position(${1:position value}, ${2:top left bottom right});"
+            "@include position(${1:position_value}, ${2:top left bottom right});"
         ],
 		"description": "Include position mixin, use null for ignore a coordinate"
     },
@@ -289,7 +289,7 @@
     "Font-size": {
         "prefix": "@font-size",
         "body": [
-            "@include font-size(${1:font-size value in px}px);"
+            "@include font-size(${1:font_size_value_in_px}px);"
         ],
 		"description": "Include font-size mixin, convert px in rem"
     },
@@ -297,7 +297,7 @@
     "Max-lines": {
         "prefix": "@max-lines",
         "body": [
-            "@include max-lines(${1:font-size in px}, ${3:line-height in px}, ${3:lines});"
+            "@include max-lines(${1:font_size_in_px}, ${3:line_height_in_px}, ${3:lines});"
         ],
 		"description": "Include max-lines mixin"
     },
@@ -305,7 +305,7 @@
     "Z-depth": {
         "prefix": "@z-depth",
         "body": [
-            "@mixin z-depth(${1:z-depth});"
+            "@mixin z-depth(${1:z_depth});"
         ],
 		"description": "Include z-depth (0-5) mixin"
     },
