@@ -179,6 +179,14 @@
 		"description": "Include align-items mixin"
     },
 
+    "Align-self": {
+        "prefix": "@align-self",
+        "body": [
+            "@include align-self(${1:property});"
+        ],
+		"description": "Include align-self mixin"
+    },
+
     "Flex-wrap": {
         "prefix": "@flex-wrap",
         "body": [
