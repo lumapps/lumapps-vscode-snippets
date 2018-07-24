@@ -1,3 +1,7 @@
+# 0.1.3
+- Fix @z-depth sass mixin
+- Add @flex-direction sass mixin
+
 # 0.1.2
 - Add @align-self sass mixin
 
