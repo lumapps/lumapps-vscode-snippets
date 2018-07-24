@@ -289,7 +289,7 @@
     "Size": {
         "prefix": "@size",
         "body": [
-            "@include size(${1:width}, ${2:height});"
+            "@include size(${1:width} ${2:height});"
         ],
 		"description": "Include size mixin, use 1 value if width = height"
     },
