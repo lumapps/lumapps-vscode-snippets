@@ -138,12 +138,12 @@
 		"description": "Include media-query(desk) mixin"
     },
 
-    "Media-query desk-wild": {
-        "prefix": "@media-desk-wild",
+    "Media-query desk-wide": {
+        "prefix": "@media-desk-wide",
         "body": [
-            "@include media-query(desk-wild) {\n\t${1:rules}\n}"
+            "@include media-query(desk-wide) {\n\t${1:rules}\n}"
         ],
-		"description": "Include media-query(desk-wild) mixin"
+		"description": "Include media-query(desk-wide) mixin"
     },
 
     // Mixin Flex
