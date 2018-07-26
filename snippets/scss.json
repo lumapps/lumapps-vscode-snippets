@@ -277,6 +277,14 @@
 		"description": "Include Lumx btn mixin"
     },
 
+    "Typography": {
+        "prefix": "@typography",
+        "body": [
+            "@include typography(${1:'display-1 / display-2 / display-3 / display-4 / body1 / body2 / title / headline / caption / subheading-1 / subheading-2'});"
+        ],
+        "description": "Include Lumx typography mixin"
+    },
+
     // Others mixins
     "Position": {
         "prefix": "@position",
