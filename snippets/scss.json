@@ -310,6 +310,14 @@
 		"description": "Include font-size mixin, convert px in rem"
     },
 
+    "Line-height": {
+        "prefix": "@line-height",
+        "body": [
+            "@include line-height(${1:line-height value}px);"
+        ],
+		"description": "Include line-height mixin, convert px in rem"
+    },
+
     "Max-lines": {
         "prefix": "@max-lines",
         "body": [
