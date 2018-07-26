@@ -228,6 +228,14 @@
 		"description": "Include theme-background mixin"
     },
 
+    "Adaptive-resize": {
+        "prefix": "@adaptive-resize",
+        "body": [
+            "@include adaptive-resize();"
+        ],
+		"description": "Include adaptive-resize mixin: background center / no-repeat / cover"
+    },
+
     // LumX mixins
     "MDI": {
         "prefix": "@mdi",
