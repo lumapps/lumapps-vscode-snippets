@@ -1,0 +1,215 @@
+{
+    // HTML Doc writing
+    "HTML Doc: warning block": {
+        "prefix": "doc-warning-block",
+        "body": [
+            "div class=\"rule-box warning\">",
+            "    <i class=\"mdi mdi-comment-alert\"></i>",
+            "    $1",
+            "</div>"
+        ],
+		"description": "Add a warning block."
+    },
+    "HTML Doc: success block": {
+        "prefix": "doc-success-block",
+        "body": [
+            "div class=\"rule-box success\">",
+            "    <i class=\"mdi mdi-checkbox-marked-circle\"></i>",
+            "    $1",
+            "</div>"
+        ],
+		"description": "Add a success block."
+    },
+    "HTML Doc: note block": {
+        "prefix": "doc-note-block",
+        "body": [
+            "div class=\"rule-box note\">",
+            "    <i class=\"mdi mdi-note-text\"></i>",
+            "    $1",
+            "</div>"
+        ],
+		"description": "Add a note block."
+    },
+    "HTML Doc: information block": {
+        "prefix": "doc-info-block",
+        "body": [
+            "div class=\"rule-box info\">",
+            "    <i class=\"mdi mdi-information\"></i>",
+            "    $1",
+            "</div>"
+        ],
+		"description": "Add an information block."
+    },
+    "HTML Doc: information 'Link' block": {
+        "prefix": "doc-info-link-block",
+        "body": [
+            "div class=\"rule-box info\">",
+            "    <i class=\"mdi mdi-link-variant\"></i>",
+            "    $1",
+            "</div>"
+        ],
+		"description": "Add an information \"Link\" block."
+    },
+    "HTML Doc: information 'Why?' block": {
+        "prefix": "doc-info-why-block",
+        "body": [
+            "div class=\"rule-box info\">",
+            "    <i class=\"mdi mdi-help-circle\"></i>",
+            "    $1",
+            "</div>"
+        ],
+		"description": "Add an information \"Why?\" block."
+    },
+
+    "HTML Doc: inline code block": {
+        "prefix": "doc-inline-code-block",
+        "body": [
+            "span class=\"code\">$1</span>",
+        ],
+		"description": "Add an inline code block."
+    },
+
+    "HTML Doc: ESLint rule": {
+        "prefix": "doc-eslint-rule",
+        "body": [
+            "li>",
+            "    <a href=\"http://eslint.org/docs/rules/$1\" target=\"_blank\">$1</a>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an ESLint rule."
+    },
+    "HTML Doc: ESLint warning only rule": {
+        "prefix": "doc-warning-only-eslint-rule",
+        "body": [
+            "li>",
+            "    <a href=\"http://eslint.org/docs/rules/$1\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alert is-warning\" title=\"This rule only displays a warning\"></i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an ESLint warning only rule."
+    },
+    "HTML Doc: ESLint good practice rule": {
+        "prefix": "doc-good-practice-eslint-rule",
+        "body": [
+            "li>",
+            "    <a href=\"http://eslint.org/docs/rules/$1\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alarm-off is-not-enforced\" title=\"This rule is not enforced, it's just a good practice.\"></i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an ESLint good practice (not enforced) rule."
+    },
+    "HTML Doc: ESLint ES6+ rule": {
+        "prefix": "doc-es6-eslint-rule",
+        "body": [
+            "li>",
+            "    <a href=\"http://eslint.org/docs/rules/$1\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alarm-off is-not-enforced\" title=\"This rule is not enforced in ES5, but is in ES6+.\">(ES6+ only)</i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an ESLint ES6+ rule."
+    },
+
+    "HTML Doc: Unicorn plugin rule": {
+        "prefix": "doc-unicorn-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/$1.md\" target=\"_blank\">$1</a>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an Unicorn plugin rule."
+    },
+    "HTML Doc: Unicorn plugin warning only rule": {
+        "prefix": "doc-unicorn-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/$1.md\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alert is-warning\" title=\"This rule only displays a warning\"></i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an Unicorn plugin warning only rule."
+    },
+    "HTML Doc: Unicorn good practice rule": {
+        "prefix": "doc-good-practice-unicorn-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/$1.md\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alarm-off is-not-enforced\" title=\"This rule is not enforced, it's just a good practice.\"></i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an Unicorn good practice (not enforced) rule."
+    },
+    "HTML Doc: Unicorn ES6+ rule": {
+        "prefix": "doc-es6-unicorn-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/$1.md\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alarm-off is-not-enforced\" title=\"This rule is not enforced in ES5, but is in ES6+.\">(ES6+ only)</i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an Unicorn ES6+ rule."
+    },
+
+    "HTML Doc: AngularJS plugin rule": {
+        "prefix": "doc-angularjs-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/Gillespie59/eslint-plugin-angular/blob/master/docs/$1.md\" target=\"_blank\">$1</a>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an AngularJS plugin rule."
+    },
+    "HTML Doc: AngularJS plugin warning only rule": {
+        "prefix": "doc-angularjs-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/Gillespie59/eslint-plugin-angular/blob/master/docs/$1.md\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alert is-warning\" title=\"This rule only displays a warning\"></i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an AngularJS plugin warning only rule."
+    },
+    "HTML Doc: AngularJS good practice rule": {
+        "prefix": "doc-good-practice-angularjs-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/Gillespie59/eslint-plugin-angular/blob/master/docs/$1.md\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alarm-off is-not-enforced\" title=\"This rule is not enforced, it's just a good practice.\"></i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an AngularJS good practice (not enforced) rule."
+    },
+    "HTML Doc: AngularJS ES6+ rule": {
+        "prefix": "doc-es6-angularjs-rule",
+        "body": [
+            "li>",
+            "    <a href=\"https://github.com/Gillespie59/eslint-plugin-angular/blob/master/docs/$1.md\" target=\"_blank\">$1</a>",
+            "    <i class=\"mdi mdi-alarm-off is-not-enforced\" title=\"This rule is not enforced in ES5, but is in ES6+.\">(ES6+ only)</i>",
+            "    <br>",
+            "    $2",
+            "</div>"
+        ],
+		"description": "Add an AngularJS ES6+ rule."
+    },
+}
