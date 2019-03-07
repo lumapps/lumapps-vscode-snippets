@@ -1,11 +1,130 @@
 {
-    // Angular
-    "@ngInject": {
+    // Misc
+
+    // AngularJS
+    "Simple watcher": {
+        "prefix": "ng-watch-variable",
+        "body": [
+            "\\$scope.\\$watch('${1:vm.}', (newValue, oldValue) => {",
+            "    if (newValue === oldValue) {",
+            "        return;",
+            "    }",
+            "",
+            "    console.log(newValue, oldValue);",
+            "}, true);"
+        ],
+		"description": "Add an AngularJS watcher on a view model variable."
+    },
+    "Function watcher": {
+        "prefix": "ng-watch-function",
+        "body": [
+            "\\$scope.\\$watch(() => {",
+            "    return $1;",
+            "}, (newValue, oldValue) => {",
+            "    if (newValue === oldValue) {",
+            "        return;",
+            "    }",
+            "",
+            "    console.log(newValue, oldValue);",
+            "}, true);"
+        ],
+		"description": "Add an AngularJS watcher on a function's return value."
+    },
+
+    "Simple event listener": {
+        "prefix": "ng-evt",
+        "body": [
+            "\\$scope.\\$on('$1', (${2:evt, { params \\}}) => {",
+            "    $3",
+            "});"
+        ],
+		"description": "Add an AngularJS event listener on the scope."
+    },
+    "Root event listener": {
+        "prefix": "ng-evt-root",
+        "body": [
+            "\\$rootScope.\\$on('$1', (${2:evt, { params \\}}) => {",
+            "    $3",
+            "});"
+        ],
+		"description": "Add an AngularJS event listener on the root scope."
+    },
+
+    "Send event downward": {
+        "prefix": "ng-broadcast",
+        "body": [
+            "\\$scope.\\$broadcast('$1'${2:, { params \\}});"
+        ],
+		"description": "Send an AngularJS event down to the current scope's children"
+    },
+    "Send root event downward": {
+        "prefix": "ng-broadcast-root",
+        "body": [
+            "\\$rootScope.\\$broadcast('$1'${2:, { params \\}});"
+        ],
+		"description": "Send an AngularJS event down from the application's root scope"
+    },
+    "Send event upward": {
+        "prefix": "ng-emit",
+        "body": [
+            "\\$scope.\\$emit('$1'${2:, { params \\}});"
+        ],
+		"description": "Send an AngularJS event up to the current scope's parents"
+    },
+
+    "Simple 'angular.isUndefinedOrEmpty'": {
+        "prefix": "ng-ue",
+        "body": [
+            "angular.isUndefinedOrEmpty($1)"
+        ],
+		"description": "Angular 'isUndefinedOrEmpty' helper."
+    },
+    "Advanced 'angular.isUndefinedOrEmpty'": {
+        "prefix": "ng-uea",
+        "body": [
+            "angular.isUndefinedOrEmpty([$1], '${2:some}')"
+        ],
+		"description": "Advanced Angular 'isUndefinedOrEmpty' helper."
+    },
+    "Simple 'angular.isDefinedAndFilled'": {
+        "prefix": "ng-df",
+        "body": [
+            "angular.isDefinedAndFilled($1)"
+        ],
+		"description": "Angular 'isDefinedAndFilled' helper."
+    },
+    "Advanced 'angular.isDefinedAndFilled'": {
+        "prefix": "ng-dfa",
+        "body": [
+            "angular.isDefinedAndFilled([$1], '${2:every}')"
+        ],
+		"description": "Advanced Angular 'isDefinedAndFilled' helper."
+    },
+
+    "Refactor into 'angular.forEach'": {
+        "prefix": "ng-afr",
+        "body": [
+            "angular.forEach($1, ($2${3:, index}) => {"
+        ],
+		"description": "Refactor a 'for' loop into an Angular's 'forEach' loop."
+    },
+    "Simple 'angular.forEach'": {
+        "prefix": "ng-af",
+        "body": [
+            "angular.forEach($1, ($2${3:, index}) => {",
+            "    $4",
+            "});"
+        ],
+		"description": "Generate a simple Angular's 'forEach' loop."
+    },
+
+    "ngInject": {
         "prefix": "ng-inject",
         "body": [
-            "/* @ngInject */"
+            "'ngInject';",
+            ""
         ],
-		"description": "Add an auto-injection loader comment."
+		"description": "Add an auto-injection loader directive at the top of a function."
     },
 
 	// ESLint
@@ -16,7 +135,6 @@
         ],
 		"description": "Disable ESLint (with optional rule name to disable) from now on."
     },
-
     "Disable ESLint - Next line": {
         "prefix": "eslint-disable-next",
         "body": [
@@ -24,7 +142,6 @@
         ],
 		"description": "Disable ESLint (with optional rule name to disable) for the next line only."
     },
-
     "Enable ESLint": {
         "prefix": "eslint-enable",
         "body": [
@@ -43,7 +160,84 @@
         ],
 		"description": "Add a default separator."
     },
-
+    "Separator for private attributes": {
+        "prefix": "separator-private-attributes",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Private attributes   //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a private attributes separator."
+    },
+    "Separator for public attributes": {
+        "prefix": "separator-public-attributes",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Public attributes    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a public attributes separator."
+    },
+    "Separator for services and utilities": {
+        "prefix": "separator-services-utilities",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "",
+            "/**",
+            " * Services and utilities.",
+            " */",
+            ""
+        ],
+		"description": "Add a services and utilities separator."
+    },
+    "Separator for private functions": {
+        "prefix": "separator-private-functions",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Private functions    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a private functions separator."
+    },
+    "Separator for public functions": {
+        "prefix": "separator-public-functions",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//     Public functions    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a public functions separator."
+    },
+    "Separator for watchers": {
+        "prefix": "separator-watchers",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//        Watchers         //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a watchers separator."
+    },
     "Separator for events": {
         "prefix": "separator-events",
         "body": [
@@ -57,7 +251,6 @@
         ],
 		"description": "Add an events separator."
     },
-
     "Separator for init method": {
         "prefix": "separator-init",
         "body": [
@@ -72,88 +265,110 @@
 		"description": "Add an init separator."
     },
 
-    "Separator for private attributes": {
-        "prefix": "separator-private-attributes",
+    "EOF export": {
+        "prefix": "export",
         "body": [
             "",
-            "/////////////////////////////",
-            "//                         //",
-            "//    Private attributes   //",
-            "//                         //",
-            "/////////////////////////////",
-            ""
+            "/////////////////////////////"
+            "",
+            "export { ${1:exportName} };"
         ],
-		"description": "Add a private attributes separator."
+		"description": "End of file export directive (with separator)."
     },
 
-    "Separator for public attributes": {
-        "prefix": "separator-public-attributes",
+    // JSDoc
+    "JSDoc: '@type {string}'": {
+        "prefix": "@ts",
         "body": [
-            "",
-            "/////////////////////////////",
-            "//                         //",
-            "//    Public attributes    //",
-            "//                         //",
-            "/////////////////////////////",
-            ""
+            "@type {string}"
         ],
-		"description": "Add a public attributes separator."
+		"description": "Add a '@type' tag for a string variable."
+    },
+    "JSDoc: '@type {Object}'": {
+        "prefix": "@to",
+        "body": [
+           "@type {Object}"
+        ],
+		"description": "Add a '@type' tag for an Object variable."
+    },
+    "JSDoc: '@type {number}'": {
+        "prefix": "@tn",
+        "body": [
+            "@type {number}"
+        ],
+		"description": "Add a '@type' tag for a number variable."
+    },
+    "JSDoc: '@type {Function}'": {
+        "prefix": "@tf",
+        "body": [
+            "@type {Function}"
+        ],
+		"description": "Add a '@type' tag for a Function variable."
+    },
+    "JSDoc: '@type {Date}'": {
+        "prefix": "@td",
+        "body": [
+            "@type {Date}"
+        ],
+		"description": "Add a '@type' tag for a Date variable."
+    },
+    "JSDoc: '@type {Array<?>}'": {
+        "prefix": "@ta",
+        "body": [
+            "@type {Array<${1:?}>}"
+        ],
+		"description": "Add a '@type' tag for an Array variable."
+    },
+    "JSDoc: '@type {Date}'": {
+        "prefix": "@td",
+        "body": [
+            "@type {Date}"
+        ],
+		"description": "Add a '@type' tag for a Date variable."
+    },
+    "JSDoc: '@type'": {
+        "prefix": "@type",
+        "body": [
+            "@type {${1:*}}"
+        ],
+		"description": "Add a generic '@type' tag."
     },
 
-    "Separator for private functions": {
-        "prefix": "separator-private-functions",
+    "JSDoc: '@constant'": {
+        "prefix": "@cst",
         "body": [
-            "",
-            "/////////////////////////////",
-            "//                         //",
-            "//    Private functions    //",
-            "//                         //",
-            "/////////////////////////////",
-            ""
+            "@constant"
         ],
-		"description": "Add a private functions separator."
+		"description": "Add a '@constant' tag."
+    },
+    "JSDoc: '@readonly'": {
+        "prefix": "@ro",
+        "body": [
+            "@readonly"
+        ],
+		"description": "Add a '@readonly' tag."
     },
 
-    "Separator for public functions": {
-        "prefix": "separator-public-functions",
+    "JSDoc: mandatory '@param'": {
+        "prefix": "@param",
         "body": [
-            "",
-            "/////////////////////////////",
-            "//                         //",
-            "//     Public functions    //",
-            "//                         //",
-            "/////////////////////////////",
-            ""
+            "@param {${1:*}} ${2:paramName} ${3:Description}."
         ],
-		"description": "Add a public functions separator."
+		"description": "Add a mandatory '@param' tag."
+    },
+    "JSDoc: optional '@param'": {
+        "prefix": "@param-opt",
+        "body": [
+            "@param {${1:*}} [${2:paramName}=${3:<default value>}] ${4:Description}."
+        ],
+		"description": "Add an optional '@param' tag."
     },
 
-    "Separator for services and utilities": {
-        "prefix": "separator-services-utilities",
+    "JSDoc: '@return'": {
+        "prefix": "@return",
         "body": [
-            "",
-            "/////////////////////////////",
-            "",
-            "/**",
-            " * Services and utilities.",
-            " */",
-            ""
+            "@return {${1:*}} ${2:Description}."
         ],
-		"description": "Add a services and utilities separator."
-    },
-
-    "Separator for watchers": {
-        "prefix": "separator-watchers",
-        "body": [
-            "",
-            "/////////////////////////////",
-            "//                         //",
-            "//        Watchers         //",
-            "//                         //",
-            "/////////////////////////////",
-            ""
-        ],
-		"description": "Add a watchers separator."
+		"description": "Add a '@return' tag."
     }
-
 }
