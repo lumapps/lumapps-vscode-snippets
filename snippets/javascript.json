@@ -319,12 +319,12 @@
         ],
 		"description": "Add a '@type' tag for an Array variable."
     },
-    "JSDoc: '@type {Date}'": {
-        "prefix": "@td",
+    "JSDoc: '@type {boolean}'": {
+        "prefix": "@tb",
         "body": [
-            "@type {Date}"
+            "@type {boolean}"
         ],
-		"description": "Add a '@type' tag for a Date variable."
+		"description": "Add a '@type' tag for a boolean variable."
     },
     "JSDoc: '@type'": {
         "prefix": "@type",
