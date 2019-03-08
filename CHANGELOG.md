@@ -1,3 +1,9 @@
+# 0.3.1
+- Fix JSDoc boolean type
+
+# 0.3.0
+¯\_(ツ)_/¯
+
 # 0.2.0
 Add TypeScript snippets:
 - globally the same as the JavaScript ones, without the AngularJS part.
