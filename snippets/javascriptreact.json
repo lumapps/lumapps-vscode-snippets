@@ -1,0 +1,222 @@
+{
+    // Misc
+
+	// ESLint
+    "Disable ESLint": {
+        "prefix": "eslint-disable",
+        "body": [
+            "/* eslint-disable ${1:my-rule-name} */"
+        ],
+		"description": "Disable ESLint (with optional rule name to disable) from now on."
+    },
+    "Disable ESLint - Next line": {
+        "prefix": "eslint-disable-next",
+        "body": [
+            "// eslint-disable-next-line ${1:my-rule-name}"
+        ],
+		"description": "Disable ESLint (with optional rule name to disable) for the next line only."
+    },
+    "Enable ESLint": {
+        "prefix": "eslint-enable",
+        "body": [
+            "/* eslint-enable ${1:my-rule-name} */"
+        ],
+		"description": "(Re-)Enable ESLint (or rules) from now on."
+    },
+
+    // Separators
+    "Default separator": {
+        "prefix": "separator-default",
+        "body": [
+            "",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a default separator."
+    },
+    "Separator for private attributes": {
+        "prefix": "separator-private-attributes",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Private attributes   //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a private attributes separator."
+    },
+    "Separator for public attributes": {
+        "prefix": "separator-public-attributes",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Public attributes    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a public attributes separator."
+    },
+    "Separator for utilities": {
+        "prefix": "separator-utilities",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "",
+            "/**",
+            " * Utilities.",
+            " */",
+            ""
+        ],
+		"description": "Add an utilities separator."
+    },
+    "Separator for private functions": {
+        "prefix": "separator-private-functions",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//    Private functions    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a private functions separator."
+    },
+    "Separator for public functions": {
+        "prefix": "separator-public-functions",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//     Public functions    //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a public functions separator."
+    },
+    "Separator for init method": {
+        "prefix": "separator-init",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "",
+            "/**",
+            " * Initialize the controller.",
+            " */",
+            ""
+        ],
+		"description": "Add an init separator."
+    },
+
+    "EOF export": {
+        "prefix": "export",
+        "body": [
+            "",
+            "/////////////////////////////"
+            "",
+            "export { ${1:exportName} };"
+        ],
+		"description": "End of file export directive (with separator)."
+    },
+
+    // JSDoc
+    "JSDoc: '@type {string}'": {
+        "prefix": "@ts",
+        "body": [
+            "@type {string}"
+        ],
+		"description": "Add a '@type' tag for a string variable."
+    },
+    "JSDoc: '@type {Object}'": {
+        "prefix": "@to",
+        "body": [
+           "@type {Object}"
+        ],
+		"description": "Add a '@type' tag for an Object variable."
+    },
+    "JSDoc: '@type {number}'": {
+        "prefix": "@tn",
+        "body": [
+            "@type {number}"
+        ],
+		"description": "Add a '@type' tag for a number variable."
+    },
+    "JSDoc: '@type {Function}'": {
+        "prefix": "@tf",
+        "body": [
+            "@type {Function}"
+        ],
+		"description": "Add a '@type' tag for a Function variable."
+    },
+    "JSDoc: '@type {Date}'": {
+        "prefix": "@td",
+        "body": [
+            "@type {Date}"
+        ],
+		"description": "Add a '@type' tag for a Date variable."
+    },
+    "JSDoc: '@type {Array<?>}'": {
+        "prefix": "@ta",
+        "body": [
+            "@type {Array<${1:?}>}"
+        ],
+		"description": "Add a '@type' tag for an Array variable."
+    },
+    "JSDoc: '@type {boolean}'": {
+        "prefix": "@tb",
+        "body": [
+            "@type {boolean}"
+        ],
+		"description": "Add a '@type' tag for a boolean variable."
+    },
+    "JSDoc: '@type'": {
+        "prefix": "@type",
+        "body": [
+            "@type {${1:*}}"
+        ],
+		"description": "Add a generic '@type' tag."
+    },
+
+    "JSDoc: '@constant'": {
+        "prefix": "@cst",
+        "body": [
+            "@constant"
+        ],
+		"description": "Add a '@constant' tag."
+    },
+    "JSDoc: '@readonly'": {
+        "prefix": "@ro",
+        "body": [
+            "@readonly"
+        ],
+		"description": "Add a '@readonly' tag."
+    },
+
+    "JSDoc: mandatory '@param'": {
+        "prefix": "@param",
+        "body": [
+            "@param {${1:*}} ${2:paramName} ${3:Description}."
+        ],
+		"description": "Add a mandatory '@param' tag."
+    },
+    "JSDoc: optional '@param'": {
+        "prefix": "@param-opt",
+        "body": [
+            "@param {${1:*}} [${2:paramName}=${3:<default value>}] ${4:Description}."
+        ],
+		"description": "Add an optional '@param' tag."
+    },
+
+    "JSDoc: '@return'": {
+        "prefix": "@return",
+        "body": [
+            "@return {${1:*}} ${2:Description}."
+        ],
+		"description": "Add a '@return' tag."
+    }
+}
