@@ -220,6 +220,15 @@
 		"description": "Add a '@return' tag."
     },
 
+    // Lodash
+    "Import from Lodash": {
+        "prefix": "lodash",
+        "body": [
+            "import ${1:lodashFunction} from 'lodash/${1:lodashFunctionModule}';"
+        ],
+        "description": "Load a Lodash function."
+    },
+
     // React
     "Import React": {
         "prefix": "import react",
