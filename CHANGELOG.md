@@ -1,3 +1,6 @@
+# 0.4.0
+- Add snippets for TSX and JSX
+
 # 0.3.1
 - Fix JSDoc boolean type
 
