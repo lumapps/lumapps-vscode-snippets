@@ -5,7 +5,7 @@
     "Simple watcher": {
         "prefix": "ng-watch-variable",
         "body": [
-            "\\$scope.\\$watch('${1:vm.}', (newValue, oldValue) => {",
+            "\\$scope.\\$watch('vm.${1:thingToWatch}', (newValue, oldValue) => {",
             "    if (newValue === oldValue) {",
             "        return;",
             "    }",
@@ -19,7 +19,7 @@
         "prefix": "ng-watch-function",
         "body": [
             "\\$scope.\\$watch(() => {",
-            "    return $1;",
+            "    return ${1:thingToWatch};",
             "}, (newValue, oldValue) => {",
             "    if (newValue === oldValue) {",
             "        return;",
@@ -34,7 +34,7 @@
     "Simple event listener": {
         "prefix": "ng-evt",
         "body": [
-            "\\$scope.\\$on('$1', (${2:evt, { params \\}}) => {",
+            "\\$scope.\\$on('${1:eventName}', (${2:evt, { params \\}}) => {",
             "    $3",
             "});"
         ],
@@ -43,7 +43,7 @@
     "Root event listener": {
         "prefix": "ng-evt-root",
         "body": [
-            "\\$rootScope.\\$on('$1', (${2:evt, { params \\}}) => {",
+            "\\$rootScope.\\$on('${1:eventName}', (${2:evt, { params \\}}) => {",
             "    $3",
             "});"
         ],
@@ -53,21 +53,21 @@
     "Send event downward": {
         "prefix": "ng-broadcast",
         "body": [
-            "\\$scope.\\$broadcast('$1'${2:, { params \\}});"
+            "\\$scope.\\$broadcast('${1:eventName}'${2:, { params \\}});"
         ],
 		"description": "Send an AngularJS event down to the current scope's children"
     },
     "Send root event downward": {
         "prefix": "ng-broadcast-root",
         "body": [
-            "\\$rootScope.\\$broadcast('$1'${2:, { params \\}});"
+            "\\$rootScope.\\$broadcast('${1:eventName}'${2:, { params \\}});"
         ],
 		"description": "Send an AngularJS event down from the application's root scope"
     },
     "Send event upward": {
         "prefix": "ng-emit",
         "body": [
-            "\\$scope.\\$emit('$1'${2:, { params \\}});"
+            "\\$scope.\\$emit('${1:eventName}'${2:, { params \\}});"
         ],
 		"description": "Send an AngularJS event up to the current scope's parents"
     },
@@ -75,28 +75,28 @@
     "Simple 'angular.isUndefinedOrEmpty'": {
         "prefix": "ng-ue",
         "body": [
-            "angular.isUndefinedOrEmpty($1)"
+            "angular.isUndefinedOrEmpty(${1:thing})"
         ],
 		"description": "Angular 'isUndefinedOrEmpty' helper."
     },
     "Advanced 'angular.isUndefinedOrEmpty'": {
         "prefix": "ng-uea",
         "body": [
-            "angular.isUndefinedOrEmpty([$1], '${2:some}')"
+            "angular.isUndefinedOrEmpty([${1:thing1}${2:, thing2}, '${3:some}')"
         ],
 		"description": "Advanced Angular 'isUndefinedOrEmpty' helper."
     },
     "Simple 'angular.isDefinedAndFilled'": {
         "prefix": "ng-df",
         "body": [
-            "angular.isDefinedAndFilled($1)"
+            "angular.isDefinedAndFilled(${1:thing})"
         ],
 		"description": "Angular 'isDefinedAndFilled' helper."
     },
     "Advanced 'angular.isDefinedAndFilled'": {
         "prefix": "ng-dfa",
         "body": [
-            "angular.isDefinedAndFilled([$1], '${2:every}')"
+            "angular.isDefinedAndFilled([${1:thing1}${2:, thing2}], '${3:every}')"
         ],
 		"description": "Advanced Angular 'isDefinedAndFilled' helper."
     },
@@ -104,14 +104,14 @@
     "Refactor into 'angular.forEach'": {
         "prefix": "ng-afr",
         "body": [
-            "angular.forEach($1, ($2${3:, index}) => {"
+            "angular.forEach(${1:things}, (${2:thing}${3:, index}) => {"
         ],
 		"description": "Refactor a 'for' loop into an Angular's 'forEach' loop."
     },
     "Simple 'angular.forEach'": {
         "prefix": "ng-af",
         "body": [
-            "angular.forEach($1, ($2${3:, index}) => {",
+            "angular.forEach(${1:things}, (${2:thing}${3:, index}) => {",
             "    $4",
             "});"
         ],
@@ -131,21 +131,21 @@
     "Disable ESLint": {
         "prefix": "eslint-disable",
         "body": [
-            "/* eslint-disable ${1:my-rule-name} */"
+            "/* eslint-disable ${1:rule-name} */"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) from now on."
     },
     "Disable ESLint - Next line": {
         "prefix": "eslint-disable-next",
         "body": [
-            "// eslint-disable-next-line ${1:my-rule-name}"
+            "// eslint-disable-next-line ${1:rule-name}"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) for the next line only."
     },
     "Enable ESLint": {
         "prefix": "eslint-enable",
         "body": [
-            "/* eslint-enable ${1:my-rule-name} */"
+            "/* eslint-enable ${1:rule-name} */"
         ],
 		"description": "(Re-)Enable ESLint (or rules) from now on."
     },
@@ -266,10 +266,10 @@
     },
 
     "EOF export": {
-        "prefix": "export",
+        "prefix": "separator-export",
         "body": [
             "",
-            "/////////////////////////////"
+            "/////////////////////////////",
             "",
             "export { ${1:exportName} };"
         ],

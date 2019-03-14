@@ -5,21 +5,21 @@
     "Disable ESLint": {
         "prefix": "eslint-disable",
         "body": [
-            "/* eslint-disable ${1:my-rule-name} */"
+            "/* eslint-disable ${1:rule-name} */"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) from now on."
     },
     "Disable ESLint - Next line": {
         "prefix": "eslint-disable-next",
         "body": [
-            "// eslint-disable-next-line ${1:my-rule-name}"
+            "// eslint-disable-next-line ${1:rule-name}"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) for the next line only."
     },
     "Enable ESLint": {
         "prefix": "eslint-enable",
         "body": [
-            "/* eslint-enable ${1:my-rule-name} */"
+            "/* eslint-enable ${1:rule-name} */"
         ],
 		"description": "(Re-)Enable ESLint (or rules) from now on."
     },
@@ -114,10 +114,10 @@
     },
 
     "EOF export": {
-        "prefix": "export",
+        "prefix": "separator-export",
         "body": [
             "",
-            "/////////////////////////////"
+            "/////////////////////////////",
             "",
             "export { ${1:exportName} };"
         ],
@@ -218,5 +218,52 @@
             "@return {${1:*}} ${2:Description}."
         ],
 		"description": "Add a '@return' tag."
+    },
+
+    // React
+    "Import React": {
+        "prefix": "import react",
+        "body": [
+            "import React from 'react';",
+            ""
+        ],
+		"description": "Add the React import expression."
+    },
+
+    "Functional component": {
+        "prefix": "FunctionalComponent",
+        "body": [
+            "/**",
+            " * ${4:Description of the component}.",
+            " */",
+            "const ${1:ComponentName} = (${2:props\\}) => {",
+            "    $3",
+            "};"
+        ],
+		"description": "Creates a functional component (with optional props)."
+    },
+    "Pure component": {
+        "prefix": "PureComponent",
+        "body": [
+            "/**",
+            " * ${5:Description of the component}.",
+            " */",
+            "class ${1:ComponentName} extends PureComponent {",
+            "    $4",
+            "}"
+        ],
+		"description": "Creates a pure component (with optional props and optional state)."
+    },
+    "Component": {
+        "prefix": "Component",
+        "body": [
+            "/**",
+            " * ${5:Description of the component}.",
+            " */",
+            "class ${1:ComponentName} extends Component {",
+            "    $4",
+            "}"
+        ],
+		"description": "Creates a component (with optional props and optional state)."
     }
 }

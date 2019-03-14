@@ -5,21 +5,21 @@
     "Disable ESLint": {
         "prefix": "eslint-disable",
         "body": [
-            "/* eslint-disable ${1:my-rule-name} */"
+            "/* eslint-disable ${1:rule-name} */"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) from now on."
     },
     "Disable ESLint - Next line": {
         "prefix": "eslint-disable-next",
         "body": [
-            "// eslint-disable-next-line ${1:my-rule-name}"
+            "// eslint-disable-next-line ${1:rule-name}"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) for the next line only."
     },
     "Enable ESLint": {
         "prefix": "eslint-enable",
         "body": [
-            "/* eslint-enable ${1:my-rule-name} */"
+            "/* eslint-enable ${1:rule-name} */"
         ],
 		"description": "(Re-)Enable ESLint (or rules) from now on."
     },
@@ -27,21 +27,21 @@
     "Disable TSLint": {
         "prefix": "tslint-disable",
         "body": [
-            "/* tslint-disable ${1:my-rule-name} */"
+            "/* tslint-disable ${1:rule-name} */"
         ],
 		"description": "Disable TSLint (with optional rule name to disable) from now on."
     },
     "Disable TSLint - Next line": {
         "prefix": "tslint-disable-next",
         "body": [
-            "// tslint-disable-next-line ${1:my-rule-name}"
+            "// tslint-disable-next-line ${1:rule-name}"
         ],
 		"description": "Disable TSLint (with optional rule name to disable) for the next line only."
     },
     "Enable TSLint": {
         "prefix": "tslint-enable",
         "body": [
-            "/* tslint-enable ${1:my-rule-name} */"
+            "/* tslint-enable ${1:rule-name} */"
         ],
 		"description": "(Re-)Enable TSLint (or rules) from now on."
     },
@@ -123,10 +123,10 @@
     },
 
     "EOF export": {
-        "prefix": "export",
+        "prefix": "separator-export",
         "body": [
             "",
-            "/////////////////////////////"
+            "/////////////////////////////",
             "",
             "export { ${1:exportName} };"
         ],
@@ -176,12 +176,12 @@
         ],
 		"description": "Add a '@type' tag for an Array variable."
     },
-    "JSDoc: '@type {Date}'": {
-        "prefix": "@td",
+    "JSDoc: '@type {boolean}'": {
+        "prefix": "@tb",
         "body": [
-            "@type {Date}"
+            "@type {boolean}"
         ],
-		"description": "Add a '@type' tag for a Date variable."
+		"description": "Add a '@type' tag for a boolean variable."
     },
     "JSDoc: '@type'": {
         "prefix": "@type",
@@ -227,5 +227,77 @@
             "@return {${1:*}} ${2:Description}."
         ],
 		"description": "Add a '@return' tag."
+    },
+
+    // React
+    "Import React": {
+        "prefix": "import react",
+        "body": [
+            "import React from 'react';",
+            ""
+        ],
+		"description": "Add the React import expression."
+    },
+
+    "Define props": {
+        "prefix": "IProps",
+        "body": [
+            "/**",
+            " * Defines the props of the component",
+            " */",
+            "interface IProps {",
+            "    $1",
+            "}"
+        ],
+		"description": "Creates an interface defining the props of the component."
+    },
+    "Define state": {
+        "prefix": "IState",
+        "body": [
+            "/**",
+            " * Defines the state of the component",
+            " */",
+            "interface IState {",
+            "    $1",
+            "}"
+        ],
+		"description": "Creates an interface defining the props of the component."
+    },
+
+    "Functional component": {
+        "prefix": "FunctionalComponent",
+        "body": [
+            "/**",
+            " * ${4:Description of the component}.",
+            " */",
+            "const ${1:ComponentName} = (${2:props\\: IProps}): JSX.Element => {",
+            "    $3",
+            "};"
+        ],
+		"description": "Creates a functional component (with optional props)."
+    },
+    "Pure component": {
+        "prefix": "PureComponent",
+        "body": [
+            "/**",
+            " * ${5:Description of the component}.",
+            " */",
+            "class ${1:ComponentName} extends PureComponent<${2:IProps}${3:, IState}> {",
+            "    $4",
+            "}"
+        ],
+		"description": "Creates a pure component (with optional props and optional state)."
+    },
+    "Component": {
+        "prefix": "Component",
+        "body": [
+            "/**",
+            " * ${5:Description of the component}.",
+            " */",
+            "class ${1:ComponentName} extends Component<${2:IProps}${3:, IState}> {",
+            "    $4",
+            "}"
+        ],
+		"description": "Creates a component (with optional props and optional state)."
     }
 }

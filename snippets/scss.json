@@ -101,7 +101,9 @@
     "Media-query palm": {
         "prefix": "@media-palm",
         "body": [
-            "@include media-query(palm) {\n\t${1:rules}\n}"
+            "@include media-query(palm) {",
+            "    $1",
+            "}"
         ],
 		"description": "Include media-query(palm) mixin"
     },
@@ -109,7 +111,9 @@
     "Media-query lap": {
         "prefix": "@media-lap",
         "body": [
-            "@include media-query(lap) {\n\t${1:rules}\n}"
+            "@include media-query(lap) {",
+            "    $1",
+            "}"
         ],
 		"description": "Include media-query(lap) mixin"
     },
@@ -117,7 +121,9 @@
     "Media-query lap-and-up": {
         "prefix": "@media-lap-and-up",
         "body": [
-            "@include media-query(lap-and-up) {\n\t${1:rules}\n}"
+            "@include media-query(lap-and-up) {",
+            "    $1",
+            "}"
         ],
 		"description": "Include media-query(lap-and-up) mixin"
     },
@@ -125,7 +131,9 @@
     "Media-query portable": {
         "prefix": "@media-portable",
         "body": [
-            "@include media-query(portable) {\n\t${1:rules}\n}"
+            "@include media-query(portable) {",
+            "    $1",
+            "}"
         ],
 		"description": "Include media-query(portable) mixin"
     },
@@ -133,7 +141,9 @@
     "Media-query desk": {
         "prefix": "@media-desk",
         "body": [
-            "@include media-query(desk) {\n\t${1:rules}\n}"
+            "@include media-query(desk) {",
+            "    $1",
+            "}"
         ],
 		"description": "Include media-query(desk) mixin"
     },
@@ -141,81 +151,18 @@
     "Media-query desk-wide": {
         "prefix": "@media-desk-wide",
         "body": [
-            "@include media-query(desk-wide) {\n\t${1:rules}\n}"
+            "@include media-query(desk-wide) {",
+            "    $1",
+            "}"
         ],
 		"description": "Include media-query(desk-wide) mixin"
-    },
-
-    // Mixin Flex
-    "Display flex": {
-        "prefix": "@display-flex",
-        "body": [
-            "@include display(flex);"
-        ],
-		"description": "Include display flex mixin"
-    },
-
-    "Flex-direction": {
-        "prefix": "@flex-direction",
-        "body": [
-            "@include flex-direction(${1:property});"
-        ],
-		"description": "Include flex-direction mixin"
-    },
-
-    "Flex": {
-        "prefix": "@flex",
-        "body": [
-            "@include flex(${1:flex_grow flex_shrink flex_basis});"
-        ],
-		"description": "Include flex mixin"
-    },
-
-    "Justify-content": {
-        "prefix": "@justify-content",
-        "body": [
-            "@include justify-content(${1:property});"
-        ],
-		"description": "Include justify-content mixin"
-    },
-
-    "Align-items": {
-        "prefix": "@align-items",
-        "body": [
-            "@include align-items(${1:property});"
-        ],
-		"description": "Include align-items mixin"
-    },
-
-    "Align-self": {
-        "prefix": "@align-self",
-        "body": [
-            "@include align-self(${1:property});"
-        ],
-		"description": "Include align-self mixin"
-    },
-
-    "Flex-wrap": {
-        "prefix": "@flex-wrap",
-        "body": [
-            "@include flex-wrap(${1:property});"
-        ],
-		"description": "Include flex-wrap mixin"
-    },
-
-    "Order": {
-        "prefix": "@order",
-        "body": [
-            "@include order(${1:order});"
-        ],
-        "description": "Include order mixin"
     },
 
     // Background mixins
     "Theme-background-image": {
         "prefix": "@theme-background-image",
         "body": [
-            "@include theme-background-image(${1:img path});"
+            "@include theme-background-image(${1:imgPath});"
         ],
 		"description": "Include theme-background-image mixin, !important is supported"
     },
@@ -223,7 +170,7 @@
     "Theme-background": {
         "prefix": "@theme-background",
         "body": [
-            "@include theme-background(${1:img path}, ${2:other rules);"
+            "@include theme-background(${1:imgPath}${2:, <other rules>);"
         ],
 		"description": "Include theme-background mixin"
     },
@@ -248,7 +195,7 @@
     "MDI-icon": {
         "prefix": "@mdi-icon",
         "body": [
-            "@include mdi-icon(${1:'icon-name'});"
+            "@include mdi-icon('${1:icon-name}');"
         ],
 		"description": "Include mdi-icon mixin"
     },
@@ -256,9 +203,9 @@
     "Lx-icon": {
         "prefix": "@icon",
         "body": [
-            "@include icon(${1:'icon-size'}, ${2:'icon-color'}, ${3:'icon-type'});"
+            "@include icon('${1:size}', ${2:color}, '${3:type}');"
         ],
-		"description": "Include Lumx icon mixin"
+		"description": "Include LumX icon mixin"
     },
 
     "Btn-reset": {
@@ -266,46 +213,46 @@
         "body": [
             "@include btn-reset();"
         ],
-		"description": "Include Lumx btn-reset mixin"
+		"description": "Include LumX btn-reset mixin"
     },
 
     "Btn-disabled": {
         "prefix": "@btn-disable",
         "body": [
-            "@include btn-disabled(${1:'btn-type'});"
+            "@include btn-disabled('${1:type}');"
         ],
-		"description": "Include Lumx btn-disabled mixin"
+		"description": "Include LumX btn-disabled mixin"
     },
 
     "Btn": {
         "prefix": "@btn",
         "body": [
-            "@include btn(${1:'btn-size'}, ${2:'btn-color'}, ${3:'btn-type'});"
+            "@include btn('${1:size}', ${2:color}, '${3:type}');"
         ],
-		"description": "Include Lumx btn mixin"
+		"description": "Include LumX btn mixin"
     },
 
     "Typography": {
         "prefix": "@typography",
         "body": [
-            "@include typography(${1:'display-1 / display-2 / display-3 / display-4 / body1 / body2 / title / headline / caption / subheading-1 / subheading-2'});"
+            "@include typography('${1:display-1|display-2|display-3|display-4|body1|body2|title|headline|caption|subheading-1|subheading-2}');"
         ],
-        "description": "Include Lumx typography mixin"
+        "description": "Include LumX typography mixin"
     },
 
     // Others mixins
     "Position": {
         "prefix": "@position",
         "body": [
-            "@include position(${1:position-value}, ${2:top left bottom right});"
+            "@include position(${1:position}, ${2:top} ${3:left} ${4:bottom} ${5right});"
         ],
-		"description": "Include position mixin, use null for ignore a coordinate"
+		"description": "Include position mixin, use null to ignore a coordinate"
     },
 
     "Size": {
         "prefix": "@size",
         "body": [
-            "@include size(${1:width} ${2:height});"
+            "@include size(${1:width}${2: height});"
         ],
 		"description": "Include size mixin, use 1 value if width = height"
     },
@@ -313,23 +260,23 @@
     "Font-size": {
         "prefix": "@font-size",
         "body": [
-            "@include font-size(${1:font-size value}px);"
+            "@include font-size(${1:size}px);"
         ],
-		"description": "Include font-size mixin, convert px in rem"
+		"description": "Include font-size mixin (convert px in rem)"
     },
 
     "Line-height": {
         "prefix": "@line-height",
         "body": [
-            "@include line-height(${1:line-height value}px);"
+            "@include line-height(${1:height}px);"
         ],
-		"description": "Include line-height mixin, convert px in rem"
+		"description": "Include line-height mixin (convert px in rem)"
     },
 
     "Max-lines": {
         "prefix": "@max-lines",
         "body": [
-            "@include max-lines(${1:font-size in px}, ${2:line-height in px}, ${3:lines});"
+            "@include max-lines(${1:fontSize}, ${2:lineHeight}, ${3:linesNumber});"
         ],
 		"description": "Include max-lines mixin"
     },
@@ -337,7 +284,7 @@
     "Z-depth": {
         "prefix": "@z-depth",
         "body": [
-            "@include z-depth(${1:z-depth});"
+            "@include z-depth(${1:zDepth});"
         ],
 		"description": "Include z-depth (0-5) mixin"
     },
@@ -354,7 +301,7 @@
             "//\\*------------------------------------*/",
             ""
         ],
-		"description": "Add a default separator."
+		"description": "Add a header title."
     },
 
     "Five lines": {

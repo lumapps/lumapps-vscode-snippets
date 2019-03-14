@@ -5,21 +5,21 @@
     "Disable ESLint": {
         "prefix": "eslint-disable",
         "body": [
-            "/* eslint-disable ${1:my-rule-name} */"
+            "/* eslint-disable ${1:rule-name} */"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) from now on."
     },
     "Disable ESLint - Next line": {
         "prefix": "eslint-disable-next",
         "body": [
-            "// eslint-disable-next-line ${1:my-rule-name}"
+            "// eslint-disable-next-line ${1:rule-name}"
         ],
 		"description": "Disable ESLint (with optional rule name to disable) for the next line only."
     },
     "Enable ESLint": {
         "prefix": "eslint-enable",
         "body": [
-            "/* eslint-enable ${1:my-rule-name} */"
+            "/* eslint-enable ${1:rule-name} */"
         ],
 		"description": "(Re-)Enable ESLint (or rules) from now on."
     },
@@ -27,21 +27,21 @@
     "Disable TSLint": {
         "prefix": "tslint-disable",
         "body": [
-            "/* tslint-disable ${1:my-rule-name} */"
+            "/* tslint-disable ${1:rule-name} */"
         ],
 		"description": "Disable TSLint (with optional rule name to disable) from now on."
     },
     "Disable TSLint - Next line": {
         "prefix": "tslint-disable-next",
         "body": [
-            "// tslint-disable-next-line ${1:my-rule-name}"
+            "// tslint-disable-next-line ${1:rule-name}"
         ],
 		"description": "Disable TSLint (with optional rule name to disable) for the next line only."
     },
     "Enable TSLint": {
         "prefix": "tslint-enable",
         "body": [
-            "/* tslint-enable ${1:my-rule-name} */"
+            "/* tslint-enable ${1:rule-name} */"
         ],
 		"description": "(Re-)Enable TSLint (or rules) from now on."
     },
@@ -123,12 +123,12 @@
     },
 
     "EOF export": {
-        "prefix": "export",
+        "prefix": "separator-export",
         "body": [
             "",
-            "/////////////////////////////"
+            "/////////////////////////////",
             "",
-            "export { ${1:exportName} };"
+            "export { ${1:exportName };"
         ],
 		"description": "End of file export directive (with separator)."
     },
@@ -176,12 +176,12 @@
         ],
 		"description": "Add a '@type' tag for an Array variable."
     },
-    "JSDoc: '@type {Date}'": {
+    "JSDoc: '@type {boolean}'": {
         "prefix": "@td",
         "body": [
-            "@type {Date}"
+            "@type {boolean}"
         ],
-		"description": "Add a '@type' tag for a Date variable."
+		"description": "Add a '@type' tag for a boolean variable."
     },
     "JSDoc: '@type'": {
         "prefix": "@type",
