@@ -1,3 +1,8 @@
+# 0.5.0
+- Add new React (JSX and TSX) snippets
+- Fix some error in existing snippets
+- Improve existing snippets
+
 # 0.4.0
 - Add snippets for TSX and JSX
 
@@ -5,7 +10,7 @@
 - Fix JSDoc boolean type
 
 # 0.3.0
-¯\_(ツ)_/¯
+- Fix some issues with new snippets
 
 # 0.2.0
 Add TypeScript snippets:
