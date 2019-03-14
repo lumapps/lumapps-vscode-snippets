@@ -235,6 +235,8 @@
         "body": [
             "/**",
             " * ${4:Description of the component}.",
+            " *",
+            " * @return {JSX.Element} The component.",
             " */",
             "const ${1:ComponentName} = (${2:props\\}) => {",
             "    $3",
@@ -248,7 +250,7 @@
             "/**",
             " * ${5:Description of the component}.",
             " */",
-            "class ${1:ComponentName} extends PureComponent {",
+            "class ${1:ComponentName} extends React.PureComponent {",
             "    $4",
             "}"
         ],
@@ -260,7 +262,7 @@
             "/**",
             " * ${5:Description of the component}.",
             " */",
-            "class ${1:ComponentName} extends Component {",
+            "class ${1:ComponentName} extends React.Component {",
             "    $4",
             "}"
         ],

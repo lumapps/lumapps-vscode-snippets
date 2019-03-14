@@ -269,8 +269,10 @@
         "body": [
             "/**",
             " * ${4:Description of the component}.",
+            " *",
+            " * @return {JSX.Element} The component.",
             " */",
-            "const ${1:ComponentName} = (${2:props\\: IProps}): JSX.Element => {",
+            "const ${1:ComponentName}: React.FC${2:<IProps>} = (${2:props\\: IProps}): JSX.Element => {",
             "    $3",
             "};"
         ],
@@ -282,7 +284,7 @@
             "/**",
             " * ${5:Description of the component}.",
             " */",
-            "class ${1:ComponentName} extends PureComponent<${2:IProps}${3:, IState}> {",
+            "class ${1:ComponentName} extends React.PureComponent<${2:IProps}${3:, IState}> {",
             "    $4",
             "}"
         ],
@@ -294,7 +296,7 @@
             "/**",
             " * ${5:Description of the component}.",
             " */",
-            "class ${1:ComponentName} extends Component<${2:IProps}${3:, IState}> {",
+            "class ${1:ComponentName} extends React.Component<${2:IProps}${3:, IState}> {",
             "    $4",
             "}"
         ],

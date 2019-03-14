@@ -51,7 +51,7 @@
             {
                 "language": "html",
                 "path": "./snippets/html.json"
-            }
+            },
             {
                 "language": "scss",
                 "path": "./snippets/scss.json"
