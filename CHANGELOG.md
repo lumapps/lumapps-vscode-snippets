@@ -1,3 +1,6 @@
+# 0.6.0
+- Add Lodash import snippet
+
 # 0.5.0
 - Add new React (JSX and TSX) snippets
 - Fix some error in existing snippets
