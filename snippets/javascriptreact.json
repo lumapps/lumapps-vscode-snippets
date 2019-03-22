@@ -124,6 +124,20 @@
 		"description": "End of file export directive (with separator)."
     },
 
+    "Separator for Redux": {
+        "prefix": "separator-redux",
+        "body": [
+            "",
+            "/////////////////////////////",
+            "//                         //",
+            "//          Redux          //",
+            "//                         //",
+            "/////////////////////////////",
+            ""
+        ],
+		"description": "Add a Redux separator."
+    },
+
     // JSDoc
     "JSDoc: '@type {string}'": {
         "prefix": "@ts",
