@@ -1,4 +1,4 @@
-# 0.6.1
+# 0.7.0
 - Add Redux separator
 
 # 0.6.0
