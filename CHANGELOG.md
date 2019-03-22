@@ -1,3 +1,6 @@
+# 0.6.1
+- Add Redux separator
+
 # 0.6.0
 - Add Lodash import snippet
 
