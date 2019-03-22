@@ -1,7 +1,7 @@
 {
     "name": "lumapps-vscode-snippets",
     "displayName": "LumApps VSCode Snippets",
-    "publisher": "LumApps",
+    "publisher": "lumapps",
     "icon": "images/lumapps-logo.png",
     "description": "Visual Studio Code snippets by LumApps",
     "license": "MIT",
