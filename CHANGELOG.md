@@ -6,6 +6,9 @@
 - Fix some error in existing snippets
 - Improve existing snippets
 
+# 0.4.1
+- Fix missing language support definition
+
 # 0.4.0
 - Add snippets for TSX and JSX
 
